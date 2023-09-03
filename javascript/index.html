@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Locadora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+
+    <script src="js/script1.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>LocaWeb</h1>
+    </header>
+
+    <main>
+        <div class="title">
+            <h2>Veiculos</h2>
+            <span>Lista de Veículos da LocaWeb.</span>
+        </div>
+        <div class="card">
+            <div class="lineInput">  
+                <label>Veículo</label>          
+                <input type="text" id="veiculo" placeholder="Nome do Veículo">
+            </div>
+
+            <div class="lineInput">  
+                <label>Valor do Veículo</label>          
+                <input type="text" id="valor" placeholder="Valor do Veículo">
+            </div>
+
+            <button onclick="veiculo.adicionar()">Adicionar</button>
+            <button onclick="veiculo.excluir()">Excluir</button>
+        </div>   
+
+        <div class="content">
+            
+        </div>
+
+       </main>
+    
+    
+</body>
+</html>
