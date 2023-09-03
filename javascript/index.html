@@ -31,19 +31,28 @@
             </div>
 
             <div class="lineInput">  
-                <label>Valor do Veículo</label>          
-                <input type="text" id="valor" placeholder="Valor do Veículo">
+                <label>Preço do Veículo</label>          
+                <input type="text" id="preco" placeholder="Valor do Veículo">
             </div>
 
-            <button onclick="veiculo.adicionar()">Adicionar</button>
-            <button onclick="veiculo.excluir()">Excluir</button>
+            <button onclick="veiculo.salvar()">Salvar</button>
+            <button onclick="veiculo.cancelar()">Cancelar</button>
         </div>   
 
         <div class="content">
-            
+            <table border="1">
+                <thead>
+                    <th class="center">ID</th>
+                    <th>Veiculo</th>
+                    <th>Valor</th>
+                    <th class="center">Ações</th>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
         </div>
-
-       </main>
+    </main>
     
     
 </body>
