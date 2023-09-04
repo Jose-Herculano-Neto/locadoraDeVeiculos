@@ -12,7 +12,40 @@ class Veiculo {
             this.adicionar(veiculo);
         }
 
-        console.log(this.arrayVeiculos);
+        this.listaTabela();
+        this.cancelar();
+    }
+
+    listaTabela() {
+        let tbody = document.getElementById('tbody');
+        tbody.innerText = '';
+
+        for(let i = 0; i < this.arrayVeiculos.length; i++) {
+            let tr = tbody.insertRow();
+
+            let td_id = tr.insertCell();
+            let td_veiculos = tr.insertCell();
+            let td_valor = tr.insertCell();
+            let td_acoes = tr.insertCell();
+
+            td_id.innerText = this.arrayVeiculos[i].id;
+            td_veiculos.innerText = this.arrayVeiculos[i].nomeVeiculo;
+            td_valor.innerText = this.arrayVeiculos[i].preco;
+            
+
+            td_id.classList.add('center');
+
+            let imgEdit = document.createElement('img');
+            imgEdit.src = 'img/editar.png';            
+
+            let imgApagar = document.createElement('img');
+            imgApagar.src = 'img/apagar.png';
+            imgApagar.setAttribute("onclick", "veiculo.deletar("+ this.arrayVeiculos[i].id +")");
+
+            td_acoes.appendChild(imgEdit);
+            td_acoes.appendChild(imgApagar);
+
+        }
     }
 
     adicionar(veiculo){
@@ -51,6 +84,11 @@ class Veiculo {
     }
 
     cancelar() {
+        document.getElementById('veiculo').value = '';
+        document.getElementById('preco').value = '';
+    }
+
+    deletar(id) {
         
     }
 }
