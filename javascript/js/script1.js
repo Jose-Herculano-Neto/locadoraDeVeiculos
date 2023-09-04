@@ -89,8 +89,17 @@ class Veiculo {
     }
 
     deletar(id) {
+
+        let tbody = document.getElementById('tbody');
+
+        for(let i = 0; i < this.arrayVeiculos.length; i++) {
+            if(this.arrayVeiculos[i].id == id) {
+                this.arrayVeiculos.splice(i, 1);
+                tbody.deleteRow(i);
+            }
+        }
         
     }
 }
 
-var veiculo = new Veiculo()
+var veiculo = new Veiculo();
